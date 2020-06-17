@@ -1,0 +1,7 @@
+= form_with model: @team do |f|
+  = f.label :trigram
+  = f.text_field :trigram
+  - if @team.errors.key?(:trigram)
+    .field-error= @team.errors.full_messages_for(:trigram).join(', ')
+  = f.submit 'Add team'
+
