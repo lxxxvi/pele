@@ -2,7 +2,7 @@ class CreateTournamentMatches < ActiveRecord::Migration[6.0]
   def change
     create_table :tournament_matches do |t|
       t.string :uefa_match_id, null: false
-      t.references :venue, foreign_key: true, null: false
+      t.string :venue_key, null: false
       t.datetime :kickoff_at, null: false
       t.string :tournament_stage, null: false
       t.string :home_team, null: false

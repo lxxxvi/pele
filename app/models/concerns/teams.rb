@@ -11,5 +11,5 @@ module Teams
     ENG CRO CZE
     POL ESP SWE
     FRA GER POR
-  ]
+  ].freeze
 end

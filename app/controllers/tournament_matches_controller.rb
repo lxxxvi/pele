@@ -1,7 +1,7 @@
 class TournamentMatchesController < ApplicationController
   before_action :set_tournament_match, only: %i[edit update]
   def index
-    @tournament_matches = TournamentMatch.chronologically.includes(:venue).joins(:venue)
+    @tournament_matches = TournamentMatch.chronologically
   end
 
   def edit; end
@@ -22,6 +22,6 @@ class TournamentMatchesController < ApplicationController
   end
 
   def tournament_match_params
-    params.require(:tournament_match).permit(:uefa_match_id, :kickoff_at, :venue_id, :home_team, :home_team_score, :guest_team, :guest_team_score, :tournament_stage)
+    params.require(:tournament_match).permit(:uefa_match_id, :kickoff_at, :venue_key, :home_team, :home_team_score, :guest_team, :guest_team_score, :tournament_stage)
   end
 end

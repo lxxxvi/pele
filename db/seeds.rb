@@ -1,30 +1,3 @@
-venues = [
-  ['Wembley Stadium', :london, 'Europe/London'],
-  ['Allianz Arena', :munich, 'Europe/Berlin'],
-  ['Stadio Olimpico', :rome, 'Europe/Rome'],
-  ['Olympic Stadium', :baku, 'Asia/Baku'],
-  ['Krestovsky Stadium', :saint_petersburg, 'Europe/Moscow'],
-  ['Puskás Aréna', :budapest, 'Europe/Budapest'],
-  ['Arena Națională', :bucharest, 'Europe/Bucharest'],
-  ['Johan Cruyff Arena', :amsterdam, 'Europe/Amsterdam'],
-  ['San Mamés', :bilbao, 'Europe/Madrid'],
-  ['Hampden Park', :glasgow, 'Europe/London'],
-  ['Aviva Stadium', :dublin, 'Europe/Dublin'],
-  ['Parken Stadium', :copenhagen, 'Europe/Copenhagen']
-]
-
-puts "\n= Loading venues ="
-all_venues = venues.each_with_object({}) do |venue, result|
-  name, city, country_time_zone_identifier = venue
-
-  puts "  * #{name}, #{city} (#{country_time_zone_identifier})"
-  result[city] = Venue.find_or_initialize_by(city: city).tap do |venue|
-    venue.name = name
-    venue.country_time_zone_identifier = country_time_zone_identifier
-    venue.save!
-  end
-end
-
 tournament_matches = [
   ['1', 'TUR', 'ITA', :group_match_1, '2021-06-11T19:00:00+00:00', :rome],
   ['2', 'WAL', 'SUI', :group_match_1, '2021-06-12T13:00:00+00:00', :baku],
@@ -80,15 +53,15 @@ tournament_matches = [
 ]
 
 puts "\n= Loading tournament_matches ="
-tournament_matches.each do |uefa_match_id, home_team, guest_team, tournament_stage, kickoff_at, venue_city|
-  puts "  * #{uefa_match_id.rjust(2, ' ')}: #{home_team} vs #{guest_team} (#{tournament_stage}, #{venue_city})"
+tournament_matches.each do |uefa_match_id, home_team, guest_team, tournament_stage, kickoff_at, venue_key|
+  puts "  * #{uefa_match_id.rjust(2, ' ')}: #{home_team} vs #{guest_team} (#{tournament_stage}, #{venue_key})"
 
   TournamentMatch.find_or_initialize_by(uefa_match_id: uefa_match_id) do |tournament_match|
     tournament_match.home_team = home_team
     tournament_match.guest_team = guest_team
     tournament_match.tournament_stage = tournament_stage
     tournament_match.kickoff_at = kickoff_at
-    tournament_match.venue = all_venues[venue_city]
+    tournament_match.venue_key = venue_key
     tournament_match.save!
   end
 end
