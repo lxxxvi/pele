@@ -1,0 +1,24 @@
+%h1.uppercase Tournament Matches
+
+%table.tournament_matches
+  %thead
+    %tr
+      %th ID
+      %th Home Team
+      %th Home Team Score
+      %th Guest Team Score
+      %th Guest Team
+      %th Venue
+      %th Kickoff At
+      %th
+  %tbody
+    - @tournament_matches.each do |tournament_match|
+      %tr
+        %td= tournament_match.uefa_match_id
+        %td= tournament_match.home_team
+        %td= tournament_match.home_team_score
+        %td= tournament_match.guest_team_score
+        %td= tournament_match.guest_team
+        %td= tournament_match.decorate.display_venue_name_with_city
+        %td= tournament_match.kickoff_at
+        %td= link_to 'Edit', edit_tournament_match_path(tournament_match)

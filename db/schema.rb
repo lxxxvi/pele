@@ -15,26 +15,16 @@ ActiveRecord::Schema.define(version: 2020_08_05_072825) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "matches", force: :cascade do |t|
+  create_table "tournament_matches", force: :cascade do |t|
     t.string "uefa_match_id", null: false
     t.bigint "venue_id", null: false
     t.datetime "kickoff_at", null: false
     t.string "tournament_stage", null: false
-    t.bigint "home_team_id"
-    t.bigint "guest_team_id"
+    t.string "home_team", null: false
+    t.string "guest_team", null: false
     t.integer "home_team_score"
     t.integer "guest_team_score"
-    t.index ["guest_team_id"], name: "index_matches_on_guest_team_id"
-    t.index ["home_team_id"], name: "index_matches_on_home_team_id"
-    t.index ["venue_id"], name: "index_matches_on_venue_id"
-  end
-
-  create_table "teams", force: :cascade do |t|
-    t.string "trigram", null: false
-    t.string "flag_svg"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["trigram"], name: "index_teams_on_trigram", unique: true
+    t.index ["venue_id"], name: "index_tournament_matches_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|
@@ -44,7 +34,5 @@ ActiveRecord::Schema.define(version: 2020_08_05_072825) do
     t.index ["name", "city"], name: "index_venues_on_name_and_city", unique: true
   end
 
-  add_foreign_key "matches", "teams", column: "guest_team_id"
-  add_foreign_key "matches", "teams", column: "home_team_id"
-  add_foreign_key "matches", "venues"
+  add_foreign_key "tournament_matches", "venues"
 end

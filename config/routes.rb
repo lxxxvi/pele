@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root to: redirect('/tournament_matches')
 
-  resources :matches
-  resources :teams
-  resources :venues, only: :index
+  resources :tournament_matches, only: %i[index edit update]
 end

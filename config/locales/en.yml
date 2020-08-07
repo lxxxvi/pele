@@ -1,13 +1,14 @@
 en:
   activerecord:
     models:
-      match: 'Match'
+      tournament_match: 'TournamentMatch'
     attributes:
-      match:
+      tournament_match:
+        uefa_match_id: 'UEFA match ID'
         kickoff_at: 'Kickoff time'
         venue_id: 'Venue'
-        home_team_id: 'Home team'
-        guest_team_id: 'Guest team'
+        home_team: 'Home team'
+        guest_team: 'Guest team'
         tournament_stages:
           group_match_1: 'Group match 1'
           group_match_2: 'Group match 2'
@@ -16,3 +17,18 @@ en:
           quarter_finals: 'Quarter finals'
           semi_finals: 'Semi finals'
           final: 'Final'
+      venue:
+        cities:
+          amsterdam: 'Amsterdam'
+          baku: 'Baku'
+          bilbao: 'Bilbao'
+          bucharest: 'Bucharest'
+          budapest: 'Budapest'
+          copenhagen: 'Copenhagen'
+          dublin: 'Dublin'
+          glasgow: 'Glasgow'
+          london: 'London'
+          munich: 'Munich'
+          rome: 'Rome'
+          saint_petersburg: 'Saint Petersburg'
+

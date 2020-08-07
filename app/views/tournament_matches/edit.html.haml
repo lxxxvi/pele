@@ -1,0 +1,49 @@
+%h1= "Edit match #{@tournament_match.uefa_match_id}"
+
+= form_with(model: @tournament_match) do |f|
+
+  .my-10
+    = f.label :uefa_match_id, class: 'block'
+    = f.text_field :uefa_match_id
+
+  .my-10
+    = f.label :kickoff_at, class: 'block'
+    = f.datetime_select :kickoff_at
+
+  .my-10
+    = f.label :venue_id, class: 'block'
+    = f.collection_select :venue_id, VenueDecorator.venues_dropdown, :last, :first
+
+  .my-10
+    = f.label :home_team, class: 'block'
+    = f.collection_select :home_team,
+                          TournamentMatchDecorator.teams_dropdown,
+                          :last,
+                          :first,
+                          include_blank: true
+
+  .my-10
+    = f.label :home_team_score, class: 'block'
+    = f.number_field :home_team_score, min: 0, max: 20, step: 1
+
+  .my-10
+    = f.label :guest_team, class: 'block'
+    = f.collection_select :guest_team,
+                          TournamentMatchDecorator.teams_dropdown,
+                          :last,
+                          :first,
+                          include_blank: true
+
+  .my-10
+    = f.label :guest_team_score, class: 'block'
+    = f.number_field :guest_team_score, min: 0, max: 20, step: 1
+
+
+  .my-10
+    = f.label :tournament_stage, class: 'block'
+    = f.collection_select :tournament_stage,
+                          TournamentMatchDecorator.tournament_stages_dropdown,
+                          :last,
+                          :first
+
+  = f.submit
