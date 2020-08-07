@@ -1,0 +1,19 @@
+%h1.uppercase Venues
+
+%table.venues
+  %thead
+    %tr
+      %th Name
+      %th City
+      %th TZ Identifier
+      %th
+      %th
+  %tbody
+    - @venues.each do |venue|
+      %tr
+        %td= venue.name
+        %td= venue.city
+        %td= venue.country_time_zone_identifier
+        %td
+        %td
+

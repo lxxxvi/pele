@@ -1,0 +1,24 @@
+%h1.uppercase Matches
+
+%table.matches
+  %thead
+    %tr
+      %th ID
+      %th Home Team
+      %th Home Team Score
+      %th Guest Team Score
+      %th Guest Team
+      %th Venue
+      %th Kickoff At
+      %th
+  %tbody
+    - @matches.each do |match|
+      %tr
+        %td= match.uefa_match_id
+        %td= match.home_team&.trigram || 'n/a'
+        %td= match.home_team_score
+        %td= match.guest_team_score
+        %td= match.guest_team&.trigram || 'n/a'
+        %td= "#{match.venue.name}, #{match.venue.city}"
+        %td= match.kickoff_at
+        %td= link_to 'Edit', edit_match_path(match)
