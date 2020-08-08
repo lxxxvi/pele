@@ -1,5 +1,6 @@
 class TournamentMatchesController < ApplicationController
   before_action :set_tournament_match, only: %i[edit update]
+
   def index
     @tournament_matches = TournamentMatch.chronologically
   end
