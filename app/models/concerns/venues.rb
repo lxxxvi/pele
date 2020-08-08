@@ -1,7 +1,6 @@
 # require 'active_support/concern'
 
 module Venues
-  # extend ActiveSupport::Concern
   VenueStruct = Struct.new(:city, :stadium, :country_time_zone_identifier)
 
   VENUES = {
@@ -19,9 +18,7 @@ module Venues
     saint_petersburg: VenueStruct.new(:saint_petersburg, 'Krestovsky Stadium', 'Europe/Moscow')
   }.freeze
 
-  # included do
-    def venue
-      @venue ||= VENUES[venue_key.to_sym]
-    end
-  # end
+  def venue
+    @venue ||= VENUES[venue_key.to_sym]
+  end
 end

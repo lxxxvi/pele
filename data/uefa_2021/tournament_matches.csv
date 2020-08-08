@@ -1,0 +1,52 @@
+uefa_match_id,home_team,guest_team,tournament_stage,kickoff_at,venue
+1,TUR,ITA,Group Match 1,2021-06-11T19:00:00+00:00,Rome
+2,WAL,SUI,Group Match 1,2021-06-12T13:00:00+00:00,Baku
+3,DEN,FIN,Group Match 1,2021-06-12T16:00:00+00:00,Copenhagen
+4,BEL,RUS,Group Match 1,2021-06-12T19:00:00+00:00,Saint Petersburg
+6,AUT,N/A,Group Match 1,2021-06-13T16:00:00+00:00,Bucharest
+5,NED,UKR,Group Match 1,2021-06-13T19:00:00+00:00,Amsterdam
+7,ENG,CRO,Group Match 1,2021-06-13T13:00:00+00:00,London
+8,N/A,CZE,Group Match 1,2021-06-14T13:00:00+00:00,Glasgow
+9,ESP,SWE,Group Match 1,2021-06-14T19:00:00+00:00,Bilbao
+10,POL,N/A,Group Match 1,2021-06-14T16:00:00+00:00,Dublin
+11,N/A,POR,Group Match 1,2021-06-15T16:00:00+00:00,Budapest
+12,FRA,GER,Group Match 1,2021-06-15T19:00:00+00:00,Munich
+13,TUR,WAL,Group Match 2,2021-06-16T16:00:00+00:00,Baku
+14,ITA,SUI,Group Match 2,2021-06-16T19:00:00+00:00,Rome
+15,FIN,RUS,Group Match 2,2021-06-16T13:00:00+00:00,Saint Petersburg
+16,DEN,BEL,Group Match 2,2021-06-17T16:00:00+00:00,Copenhagen
+18,UKR,N/A,Group Match 2,2021-06-17T13:00:00+00:00,Bucharest
+17,NED,AUT,Group Match 2,2021-06-17T19:00:00+00:00,Amsterdam
+19,CRO,CZE,Group Match 2,2021-06-18T16:00:00+00:00,Glasgow
+20,ENG,N/A,Group Match 2,2021-06-18T19:00:00+00:00,London
+21,SWE,N/A,Group Match 2,2021-06-18T13:00:00+00:00,Dublin
+22,ESP,POL,Group Match 2,2021-06-19T19:00:00+00:00,Bilbao
+23,N/A,FRA,Group Match 2,2021-06-19T13:00:00+00:00,Budapest
+24,POR,GER,Group Match 2,2021-06-19T16:00:00+00:00,Munich
+25,SUI,TUR,Group Match 3,2021-06-20T16:00:00+00:00,Baku
+26,ITA,WAL,Group Match 3,2021-06-20T16:00:00+00:00,Rome
+27,RUS,DEN,Group Match 3,2021-06-21T19:00:00+00:00,Copenhagen
+28,FIN,BEL,Group Match 3,2021-06-21T19:00:00+00:00,Saint Petersburg
+29,N/A,NED,Group Match 3,2021-06-21T16:00:00+00:00,Amsterdam
+30,UKR,AUT,Group Match 3,2021-06-21T16:00:00+00:00,Bucharest
+31,CRO,N/A,Group Match 3,2021-06-22T19:00:00+00:00,Glasgow
+32,CZE,ENG,Group Match 3,2021-06-22T19:00:00+00:00,London
+33,N/A,ESP,Group Match 3,2021-06-23T16:00:00+00:00,Bilbao
+34,SWE,POL,Group Match 3,2021-06-23T16:00:00+00:00,Dublin
+35,POR,FRA,Group Match 3,2021-06-23T19:00:00+00:00,Budapest
+36,GER,N/A,Group Match 3,2021-06-23T19:00:00+00:00,Munich
+38,N/A,N/A,Round Of 16,2021-06-26T16:00:00+00:00,Amsterdam
+37,N/A,N/A,Round Of 16,2021-06-26T19:00:00+00:00,London
+40,N/A,N/A,Round Of 16,2021-06-27T16:00:00+00:00,Budapest
+39,N/A,N/A,Round Of 16,2021-06-27T19:00:00+00:00,Bilbao
+42,N/A,N/A,Round Of 16,2021-06-28T16:00:00+00:00,Copenhagen
+41,N/A,N/A,Round Of 16,2021-06-28T19:00:00+00:00,Bucharest
+44,N/A,N/A,Round Of 16,2021-06-29T16:00:00+00:00,Dublin
+43,N/A,N/A,Round Of 16,2021-06-29T19:00:00+00:00,Glasgow
+45,N/A,N/A,Quarter Finals,2021-07-02T16:00:00+00:00,Saint Petersburg
+46,N/A,N/A,Quarter Finals,2021-07-02T19:00:00+00:00,Munich
+47,N/A,N/A,Quarter Finals,2021-07-03T16:00:00+00:00,Baku
+48,N/A,N/A,Quarter Finals,2021-07-03T19:00:00+00:00,Rome
+49,N/A,N/A,Semi Finals,2021-07-06T19:00:00+00:00,London
+50,N/A,N/A,Semi Finals,2021-07-07T19:00:00+00:00,London
+51,N/A,N/A,Final,2021-07-11T19:00:00+00:00,London

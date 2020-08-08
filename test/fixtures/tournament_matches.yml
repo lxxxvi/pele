@@ -1,0 +1,511 @@
+---
+
+uefa_match_1:
+  uefa_match_id: '1'
+  venue_key: rome
+  kickoff_at: 2021-06-11 19:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: TUR
+  guest_team: ITA
+  home_team_score:
+  guest_team_score:
+
+uefa_match_2:
+  uefa_match_id: '2'
+  venue_key: baku
+  kickoff_at: 2021-06-12 13:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: WAL
+  guest_team: SUI
+  home_team_score:
+  guest_team_score:
+
+uefa_match_3:
+  uefa_match_id: '3'
+  venue_key: copenhagen
+  kickoff_at: 2021-06-12 16:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: DEN
+  guest_team: FIN
+  home_team_score:
+  guest_team_score:
+
+uefa_match_4:
+  uefa_match_id: '4'
+  venue_key: saint_petersburg
+  kickoff_at: 2021-06-12 19:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: BEL
+  guest_team: RUS
+  home_team_score:
+  guest_team_score:
+
+uefa_match_6:
+  uefa_match_id: '6'
+  venue_key: bucharest
+  kickoff_at: 2021-06-13 16:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: AUT
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_5:
+  uefa_match_id: '5'
+  venue_key: amsterdam
+  kickoff_at: 2021-06-13 19:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: NED
+  guest_team: UKR
+  home_team_score:
+  guest_team_score:
+
+uefa_match_7:
+  uefa_match_id: '7'
+  venue_key: london
+  kickoff_at: 2021-06-13 13:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: ENG
+  guest_team: CRO
+  home_team_score:
+  guest_team_score:
+
+uefa_match_8:
+  uefa_match_id: '8'
+  venue_key: glasgow
+  kickoff_at: 2021-06-14 13:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: N/A
+  guest_team: CZE
+  home_team_score:
+  guest_team_score:
+
+uefa_match_9:
+  uefa_match_id: '9'
+  venue_key: bilbao
+  kickoff_at: 2021-06-14 19:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: ESP
+  guest_team: SWE
+  home_team_score:
+  guest_team_score:
+
+uefa_match_10:
+  uefa_match_id: '10'
+  venue_key: dublin
+  kickoff_at: 2021-06-14 16:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: POL
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_11:
+  uefa_match_id: '11'
+  venue_key: budapest
+  kickoff_at: 2021-06-15 16:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: N/A
+  guest_team: POR
+  home_team_score:
+  guest_team_score:
+
+uefa_match_12:
+  uefa_match_id: '12'
+  venue_key: munich
+  kickoff_at: 2021-06-15 19:00:00 UTC
+  tournament_stage: group_match_1
+  home_team: FRA
+  guest_team: GER
+  home_team_score:
+  guest_team_score:
+
+uefa_match_13:
+  uefa_match_id: '13'
+  venue_key: baku
+  kickoff_at: 2021-06-16 16:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: TUR
+  guest_team: WAL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_14:
+  uefa_match_id: '14'
+  venue_key: rome
+  kickoff_at: 2021-06-16 19:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: ITA
+  guest_team: SUI
+  home_team_score:
+  guest_team_score:
+
+uefa_match_15:
+  uefa_match_id: '15'
+  venue_key: saint_petersburg
+  kickoff_at: 2021-06-16 13:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: FIN
+  guest_team: RUS
+  home_team_score:
+  guest_team_score:
+
+uefa_match_16:
+  uefa_match_id: '16'
+  venue_key: copenhagen
+  kickoff_at: 2021-06-17 16:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: DEN
+  guest_team: BEL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_18:
+  uefa_match_id: '18'
+  venue_key: bucharest
+  kickoff_at: 2021-06-17 13:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: UKR
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_17:
+  uefa_match_id: '17'
+  venue_key: amsterdam
+  kickoff_at: 2021-06-17 19:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: NED
+  guest_team: AUT
+  home_team_score:
+  guest_team_score:
+
+uefa_match_19:
+  uefa_match_id: '19'
+  venue_key: glasgow
+  kickoff_at: 2021-06-18 16:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: CRO
+  guest_team: CZE
+  home_team_score:
+  guest_team_score:
+
+uefa_match_20:
+  uefa_match_id: '20'
+  venue_key: london
+  kickoff_at: 2021-06-18 19:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: ENG
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_21:
+  uefa_match_id: '21'
+  venue_key: dublin
+  kickoff_at: 2021-06-18 13:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: SWE
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_22:
+  uefa_match_id: '22'
+  venue_key: bilbao
+  kickoff_at: 2021-06-19 19:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: ESP
+  guest_team: POL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_23:
+  uefa_match_id: '23'
+  venue_key: budapest
+  kickoff_at: 2021-06-19 13:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: N/A
+  guest_team: FRA
+  home_team_score:
+  guest_team_score:
+
+uefa_match_24:
+  uefa_match_id: '24'
+  venue_key: munich
+  kickoff_at: 2021-06-19 16:00:00 UTC
+  tournament_stage: group_match_2
+  home_team: POR
+  guest_team: GER
+  home_team_score:
+  guest_team_score:
+
+uefa_match_25:
+  uefa_match_id: '25'
+  venue_key: baku
+  kickoff_at: 2021-06-20 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: SUI
+  guest_team: TUR
+  home_team_score:
+  guest_team_score:
+
+uefa_match_26:
+  uefa_match_id: '26'
+  venue_key: rome
+  kickoff_at: 2021-06-20 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: ITA
+  guest_team: WAL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_27:
+  uefa_match_id: '27'
+  venue_key: copenhagen
+  kickoff_at: 2021-06-21 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: RUS
+  guest_team: DEN
+  home_team_score:
+  guest_team_score:
+
+uefa_match_28:
+  uefa_match_id: '28'
+  venue_key: saint_petersburg
+  kickoff_at: 2021-06-21 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: FIN
+  guest_team: BEL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_29:
+  uefa_match_id: '29'
+  venue_key: amsterdam
+  kickoff_at: 2021-06-21 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: N/A
+  guest_team: NED
+  home_team_score:
+  guest_team_score:
+
+uefa_match_30:
+  uefa_match_id: '30'
+  venue_key: bucharest
+  kickoff_at: 2021-06-21 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: UKR
+  guest_team: AUT
+  home_team_score:
+  guest_team_score:
+
+uefa_match_31:
+  uefa_match_id: '31'
+  venue_key: glasgow
+  kickoff_at: 2021-06-22 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: CRO
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_32:
+  uefa_match_id: '32'
+  venue_key: london
+  kickoff_at: 2021-06-22 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: CZE
+  guest_team: ENG
+  home_team_score:
+  guest_team_score:
+
+uefa_match_33:
+  uefa_match_id: '33'
+  venue_key: bilbao
+  kickoff_at: 2021-06-23 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: N/A
+  guest_team: ESP
+  home_team_score:
+  guest_team_score:
+
+uefa_match_34:
+  uefa_match_id: '34'
+  venue_key: dublin
+  kickoff_at: 2021-06-23 16:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: SWE
+  guest_team: POL
+  home_team_score:
+  guest_team_score:
+
+uefa_match_35:
+  uefa_match_id: '35'
+  venue_key: budapest
+  kickoff_at: 2021-06-23 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: POR
+  guest_team: FRA
+  home_team_score:
+  guest_team_score:
+
+uefa_match_36:
+  uefa_match_id: '36'
+  venue_key: munich
+  kickoff_at: 2021-06-23 19:00:00 UTC
+  tournament_stage: group_match_3
+  home_team: GER
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_38:
+  uefa_match_id: '38'
+  venue_key: amsterdam
+  kickoff_at: 2021-06-26 16:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_37:
+  uefa_match_id: '37'
+  venue_key: london
+  kickoff_at: 2021-06-26 19:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_40:
+  uefa_match_id: '40'
+  venue_key: budapest
+  kickoff_at: 2021-06-27 16:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_39:
+  uefa_match_id: '39'
+  venue_key: bilbao
+  kickoff_at: 2021-06-27 19:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_42:
+  uefa_match_id: '42'
+  venue_key: copenhagen
+  kickoff_at: 2021-06-28 16:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_41:
+  uefa_match_id: '41'
+  venue_key: bucharest
+  kickoff_at: 2021-06-28 19:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_44:
+  uefa_match_id: '44'
+  venue_key: dublin
+  kickoff_at: 2021-06-29 16:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_43:
+  uefa_match_id: '43'
+  venue_key: glasgow
+  kickoff_at: 2021-06-29 19:00:00 UTC
+  tournament_stage: round_of_16
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_45:
+  uefa_match_id: '45'
+  venue_key: saint_petersburg
+  kickoff_at: 2021-07-02 16:00:00 UTC
+  tournament_stage: quarter_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_46:
+  uefa_match_id: '46'
+  venue_key: munich
+  kickoff_at: 2021-07-02 19:00:00 UTC
+  tournament_stage: quarter_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_47:
+  uefa_match_id: '47'
+  venue_key: baku
+  kickoff_at: 2021-07-03 16:00:00 UTC
+  tournament_stage: quarter_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_48:
+  uefa_match_id: '48'
+  venue_key: rome
+  kickoff_at: 2021-07-03 19:00:00 UTC
+  tournament_stage: quarter_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_49:
+  uefa_match_id: '49'
+  venue_key: london
+  kickoff_at: 2021-07-06 19:00:00 UTC
+  tournament_stage: semi_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_50:
+  uefa_match_id: '50'
+  venue_key: london
+  kickoff_at: 2021-07-07 19:00:00 UTC
+  tournament_stage: semi_finals
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
+
+uefa_match_51:
+  uefa_match_id: '51'
+  venue_key: london
+  kickoff_at: 2021-07-11 19:00:00 UTC
+  tournament_stage: final
+  home_team: N/A
+  guest_team: N/A
+  home_team_score:
+  guest_team_score:
