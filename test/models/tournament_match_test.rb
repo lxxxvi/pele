@@ -38,4 +38,7 @@ class TournamentMatchTest < ActiveSupport::TestCase
       assert_includes errors, "UEFA match ID has already been taken"
     end
   end
+
+  test '#venue' do
+  end
 end

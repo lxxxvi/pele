@@ -24,6 +24,9 @@ ActiveRecord::Schema.define(version: 2020_08_05_072825) do
     t.string "guest_team", null: false
     t.integer "home_team_score"
     t.integer "guest_team_score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["uefa_match_id"], name: "index_tournament_matches_on_uefa_match_id", unique: true
   end
 
 end

@@ -11,6 +11,7 @@ class CreateTournamentMatches < ActiveRecord::Migration[6.0]
       t.integer :guest_team_score, null: true
 
       t.index [:uefa_match_id], unique: true
+      t.timestamps
     end
   end
 end
