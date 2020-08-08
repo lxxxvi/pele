@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class TournamentMatchTest < ActiveSupport::TestCase
+  setup do
+    @tournament_match_1 = tournament_matches(:uefa_match_1)
+  end
+
   test 'not #valid?' do
     tournament_match = TournamentMatch.new
 
@@ -30,7 +34,7 @@ class TournamentMatchTest < ActiveSupport::TestCase
   end
 
   test 'validates uniqueness of uefa_match_id' do
-    tournament_match = tournament_matches(:uefa_match_1).dup
+    tournament_match = @tournament_match_1.dup
 
     assert_not tournament_match.valid?
 
@@ -40,5 +44,8 @@ class TournamentMatchTest < ActiveSupport::TestCase
   end
 
   test '#venue' do
+    assert_equal :rome, @tournament_match_1.venue.city
+    assert_equal 'Stadio Olimpico', @tournament_match_1.venue.stadium
+    assert_equal 'Europe/Rome', @tournament_match_1.venue.country_time_zone_identifier
   end
 end
