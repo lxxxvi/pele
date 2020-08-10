@@ -8,10 +8,9 @@
     = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   %body
-    .nav
+    .nav.border-b
       %ul
-        %li= link_to 'Home', root_path
-        %li= link_to 'Teams', teams_path
+        %li= link_to 'Matches', tournament_matches_path
 
     - if flash.any?
       .messages
@@ -19,8 +18,3 @@
 
     .content
       = yield
-
-    .hidden
-      .p here comes vue
-      #vue-target
-      = javascript_pack_tag 'hello_vue'

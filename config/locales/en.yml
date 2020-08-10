@@ -1,33 +1,33 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    models:
+      tournament_match: 'TournamentMatch'
+    attributes:
+      tournament_match:
+        uefa_match_id: 'UEFA match ID'
+        kickoff_at: 'Kickoff time'
+        venue_id: 'Venue'
+        home_team: 'Home team'
+        guest_team: 'Guest team'
+        tournament_stages:
+          group_match_1: 'Group match 1'
+          group_match_2: 'Group match 2'
+          group_match_3: 'Group match 3'
+          round_of_16: 'Round of 16'
+          quarter_finals: 'Quarter finals'
+          semi_finals: 'Semi finals'
+          final: 'Final'
+  venues:
+    amsterdam: 'Amsterdam'
+    baku: 'Baku'
+    bilbao: 'Bilbao'
+    bucharest: 'Bucharest'
+    budapest: 'Budapest'
+    copenhagen: 'Copenhagen'
+    dublin: 'Dublin'
+    glasgow: 'Glasgow'
+    london: 'London'
+    munich: 'Munich'
+    rome: 'Rome'
+    saint_petersburg: 'Saint Petersburg'
+
