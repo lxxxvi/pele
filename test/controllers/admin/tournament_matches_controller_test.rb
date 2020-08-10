@@ -1,17 +1,24 @@
 require 'test_helper'
 
 class Admin::TournamentMatchesControllerTest < ActionDispatch::IntegrationTest
+  teardown do
+    sign_out_admin
+  end
+
   test 'get index' do
+    sign_in_admin
     get admin_tournament_matches_path
     assert_response :success
   end
 
   test 'get edit' do
+    sign_in_admin
     get edit_admin_tournament_match_path(tournament_matches(:uefa_match_1))
     assert_response :success
   end
 
   test 'put update' do
+    sign_in_admin
     tournament_match = tournament_matches(:uefa_match_1)
 
     assert_changes -> { tournament_match.updated_at } do
