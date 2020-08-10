@@ -2,13 +2,16 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css", :rel => "stylesheet"}/
+
     %title Pele
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   %body
-    .nav.border-b
+    .nav
       %ul
         %li= link_to 'Matches', tournament_matches_path
 
