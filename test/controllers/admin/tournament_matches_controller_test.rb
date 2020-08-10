@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class TournamentMatchesControllerTest < ActionDispatch::IntegrationTest
+class Admin::TournamentMatchesControllerTest < ActionDispatch::IntegrationTest
   test 'get index' do
-    get tournament_matches_path
+    get admin_tournament_matches_path
     assert_response :success
   end
 
   test 'get edit' do
-    get edit_tournament_match_path(tournament_matches(:uefa_match_1))
+    get edit_admin_tournament_match_path(tournament_matches(:uefa_match_1))
     assert_response :success
   end
 
@@ -15,7 +15,7 @@ class TournamentMatchesControllerTest < ActionDispatch::IntegrationTest
     tournament_match = tournament_matches(:uefa_match_1)
 
     assert_changes -> { tournament_match.updated_at } do
-      put tournament_match_path(tournament_match),
+      put admin_tournament_match_path(tournament_match),
           params: {
             tournament_match: {
               uefa_match_id: '99',
@@ -43,7 +43,7 @@ class TournamentMatchesControllerTest < ActionDispatch::IntegrationTest
     assert_equal 9, tournament_match.home_team_score
     assert_equal 8, tournament_match.guest_team_score
 
-    assert_redirected_to tournament_matches_path
+    assert_redirected_to admin_tournament_matches_path
     follow_redirect!
     assert_response :success
   end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   post "/graphql", to: "graphql#execute"
-  root to: redirect('/tournament_matches')
 
-  resources :tournament_matches, only: %i[index edit update]
+  namespace :admin do
+    resources :tournament_matches, only: %i[index edit update]
+    root to: redirect('/admin/tournament_matches')
+  end
 end
