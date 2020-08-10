@@ -1,4 +1,4 @@
-class TournamentMatchesFixtureService
+class TournamentMatchesToFixtureExporter
   def initialize(tournament_matches)
     @tournament_matches = tournament_matches
   end

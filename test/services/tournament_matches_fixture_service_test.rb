@@ -1,11 +1,11 @@
 require 'test_helper'
 
-class TournamentMatchesFixtureServiceTest < ActiveSupport::TestCase
+class TournamentMatchesToFixtureExporterTest < ActiveSupport::TestCase
   test '#to_fixture_yaml' do
     tournament_matches = TournamentMatch.chronologically.first(2)
 
     assert_equal expected_yaml,
-                 TournamentMatchesFixtureService.new(tournament_matches).to_fixture_yaml
+                 TournamentMatchesToFixtureExporter.new(tournament_matches).to_fixture_yaml
   end
 
   private
