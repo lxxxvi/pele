@@ -1,5 +1,3 @@
-# require 'active_support/concern'
-
 module Venues
   VenueStruct = Struct.new(:city, :stadium, :country_time_zone_identifier)
 

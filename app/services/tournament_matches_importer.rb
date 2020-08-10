@@ -20,14 +20,21 @@ class TournamentMatchesImporter
 
   def import(csv_row)
     tournament_match = TournamentMatch.find_or_initialize_by(uefa_match_id: csv_row[:uefa_match_id])
-    tournament_match.assign_attributes({
-      home_team: csv_row[:home_team],
-      guest_team: csv_row[:guest_team],
-      tournament_stage: csv_row[:tournament_stage].tr(' ', '_').downcase.to_sym,
-      kickoff_at: csv_row[:kickoff_at],
-      venue_key: csv_row[:venue].tr(' ', '_').downcase.to_sym
-    })
 
-    tournament_match.save!
+    if tournament_match.new_record?
+      tournament_match.assign_attributes({
+        home_team: csv_row[:home_team],
+        guest_team: csv_row[:guest_team],
+        tournament_stage: to_enum(csv_row[:tournament_stage]),
+        kickoff_at: csv_row[:kickoff_at],
+        venue_key: to_enum(csv_row[:venue])
+      })
+
+      tournament_match.save!
+    end
+  end
+
+  def to_enum(value)
+    value.tr(' ', '_').downcase.to_sym
   end
 end
