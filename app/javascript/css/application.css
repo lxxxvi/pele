@@ -1,12 +1,3 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-
-a {
-  @apply text-pink-500;
+.input-group {
+  margin-bottom: 24px;
 }
-
-a:hover {
-  @apply transition duration-100 text-green-500 ease-in-out;
-}
-
-@import "tailwindcss/utilities";

@@ -1,52 +1,56 @@
-%h1= "Edit match #{@tournament_match.uefa_match_id}"
-
 = form_with(model: @tournament_match) do |f|
+  %fieldset
+    %legend= "Edit tournament match #{@tournament_match.uefa_match_id}"
+    .input-group.vertical
+      = f.label :uefa_match_id
+      = f.text_field :uefa_match_id
 
-  .my-10
-    = f.label :uefa_match_id, class: 'block'
-    = f.text_field :uefa_match_id
+    .input-group
+      %div= f.label :kickoff_at
+      = f.datetime_select :kickoff_at
 
-  .my-10
-    = f.label :kickoff_at, class: 'block'
-    = f.datetime_select :kickoff_at
+    .input-group.vertical
+      = f.label :tournament_stage
+      = f.collection_select :tournament_stage,
+                            TournamentMatchDecorator.tournament_stages_dropdown,
+                            :first,
+                            :last
 
-  .my-10
-    = f.label :venue_key, class: 'block'
-    = f.collection_select :venue_key,
-                          TournamentMatchDecorator.venues_cities_dropdown,
-                          :first,
-                          :last
+    .input-group.vertical
+      = f.label :venue_key
+      = f.collection_select :venue_key,
+                            TournamentMatchDecorator.venues_cities_dropdown,
+                            :first,
+                            :last
 
-  .my-10
-    = f.label :home_team, class: 'block'
-    = f.collection_select :home_team,
-                          TournamentMatchDecorator.teams_dropdown,
-                          :first,
-                          :last,
-                          include_blank: true
+    .content
+      .row
+        .col-sm
+          .input-group.vertical
+            = f.label :home_team
+            = f.collection_select :home_team,
+                                  TournamentMatchDecorator.teams_dropdown,
+                                  :first,
+                                  :last,
+                                  include_blank: true
 
-  .my-10
-    = f.label :home_team_score, class: 'block'
-    = f.number_field :home_team_score, min: 0, max: 20, step: 1
+          .input-group.vertical
+            = f.label :home_team_score
+            = f.number_field :home_team_score, min: 0, max: 20, step: 1
+        .col-sm
+          .input-group.vertical
+            = f.label :guest_team
+            = f.collection_select :guest_team,
+                                  TournamentMatchDecorator.teams_dropdown,
+                                  :first,
+                                  :last,
+                                  include_blank: true
 
-  .my-10
-    = f.label :guest_team, class: 'block'
-    = f.collection_select :guest_team,
-                          TournamentMatchDecorator.teams_dropdown,
-                          :first,
-                          :last,
-                          include_blank: true
-
-  .my-10
-    = f.label :guest_team_score, class: 'block'
-    = f.number_field :guest_team_score, min: 0, max: 20, step: 1
+          .input-group.vertical
+            = f.label :guest_team_score
+            = f.number_field :guest_team_score, min: 0, max: 20, step: 1
 
 
-  .my-10
-    = f.label :tournament_stage, class: 'block'
-    = f.collection_select :tournament_stage,
-                          TournamentMatchDecorator.tournament_stages_dropdown,
-                          :first,
-                          :last
+    = f.submit
 
-  = f.submit
+    = link_to 'Cancel', tournament_matches_path
