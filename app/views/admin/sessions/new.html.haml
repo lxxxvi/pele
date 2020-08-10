@@ -1,0 +1,9 @@
+%h1 Admin sign in
+
+= form_with model: nil, url: admin_sessions_path do |f|
+  %fieldset
+    %legend Admin sign in
+    .input-group.vertical
+      = f.label :admin_password
+      = f.password_field :admin_password
+    = f.submit 'Sign in'

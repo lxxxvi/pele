@@ -10,13 +10,16 @@
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all'
   %body
-    .nav
-      %ul
-        %li= link_to 'Matches', admin_tournament_matches_path
+    - if admin_signed_in?
+      .nav
+        %ul
+          %li= link_to 'Matches', admin_tournament_matches_path
+          %li= link_to 'Sign out', admin_sign_out_path
 
     - if flash.any?
       .messages
         .flash.notice= flash[:notice]
+        .flash.alert= flash[:alert]
 
     .content
       = yield
