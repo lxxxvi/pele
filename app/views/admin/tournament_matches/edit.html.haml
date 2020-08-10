@@ -1,4 +1,4 @@
-= form_with(model: @tournament_match) do |f|
+= form_with(model: [:admin, @tournament_match]) do |f|
   %fieldset
     %legend= "Edit tournament match #{@tournament_match.uefa_match_id}"
     .input-group.vertical
@@ -53,4 +53,4 @@
 
     = f.submit
 
-    = link_to 'Cancel', tournament_matches_path
+    = link_to 'Cancel', admin_tournament_matches_path

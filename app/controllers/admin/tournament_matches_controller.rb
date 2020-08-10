@@ -1,4 +1,4 @@
-class TournamentMatchesController < ApplicationController
+class Admin::TournamentMatchesController < Admin::BaseController
   before_action :set_tournament_match, only: %i[edit update]
 
   def index
@@ -10,7 +10,7 @@ class TournamentMatchesController < ApplicationController
   def update
     if @tournament_match.update(tournament_match_params)
       flash[:notice] = I18n.t('.update_success')
-      redirect_to tournament_matches_path
+      redirect_to admin_tournament_matches_path
     else
       render :edit, alert: I18n.t('.update_failed')
     end
