@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :tournament_matches, only: %i[index edit update]
     root to: redirect('/admin/tournament_matches')
   end
+
+  root to: 'public#index'
 end

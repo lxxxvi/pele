@@ -8,7 +8,8 @@
     %title Pele ADMIN
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_pack_tag 'application', media: 'all'
+    = stylesheet_pack_tag 'admin_application', media: 'all'
+    = javascript_pack_tag 'admin_application'
   %body
     - if admin_signed_in?
       .nav

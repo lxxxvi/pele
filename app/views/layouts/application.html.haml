@@ -10,4 +10,5 @@
     = stylesheet_pack_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
   %body
-    PUBLIC
+    %div{ 'data-behaviour': 'vue' }
+    = javascript_pack_tag 'pele_vue'
