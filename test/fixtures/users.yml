@@ -1,0 +1,6 @@
+DEFAULTS: &DEFAULTS
+  password_digest: "$2a$12$7b4wx5RgQgBkn2crRg40KedolVU9AQHcgC224QXuTD6gHvWIfUXau" # abc
+
+maradona:
+  <<: *DEFAULTS
+  email: maradona@maradona.com
