@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  post "/graphql", to: "graphql#execute"
+  post '/graphql', to: 'graphql#execute'
+  get '/graphiql', to: 'graphql#graphiql', layout: false
 
   namespace :admin do
     resources :sessions, only: %i[new create]

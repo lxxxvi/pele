@@ -19,6 +19,13 @@ class GraphqlController < ApplicationController
     handle_error_in_development e
   end
 
+
+  def graphiql
+    render file: Rails.root.join('public/404.html'), status: :not_found, layout: false unless Rails.env.development?
+
+    render 'graphql/graphiql', layout: false
+  end
+
   private
 
   # Handle variables in form data, JSON body, or a blank value
