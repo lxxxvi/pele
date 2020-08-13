@@ -2,7 +2,7 @@ module Mutations
   class SignUpUser < BaseMutation
     argument :user_params, Types::UserParams, required: true
 
-    field :email, String, null: true
+    field :user, Types::User, null: true
     field :errors, [Types::UserError], null: false
 
     def resolve(user_params: nil)
@@ -10,7 +10,7 @@ module Mutations
       user.save
 
       {
-        email: user.email,
+        user: user,
         errors: build_errors(user)
       }
     end

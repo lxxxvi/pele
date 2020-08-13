@@ -20,7 +20,9 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
     query_string = <<~GRAPHQL
       mutation signUpUser($input: SignUpUserInput!) {
         signUpUser(input: $input) {
-          email
+          user {
+            email
+          }
           errors {
             attribute
             message
@@ -38,7 +40,8 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
     json_response = JSON.parse(response.body)
     data = json_response['data']
 
-    assert_equal 'zidane@zidane.com', data['signUpUser']['email']
+    assert_equal 'zidane@zidane.com', data['signUpUser']['user']['email']
+    assert_equal 0, data['signUpUser']['errors'].size
   end
 
   test '#graphql, mutation signInUser' do

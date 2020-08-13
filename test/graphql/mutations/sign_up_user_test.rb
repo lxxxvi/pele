@@ -10,7 +10,7 @@ class Mutations::SignUpUserTest < ActiveSupport::TestCase
     )
 
     assert_equal 0, result[:errors].size
-    assert_equal 'foo@bar.com', result[:email]
+    assert_equal 'foo@bar.com', result[:user][:email]
   end
 
   private
