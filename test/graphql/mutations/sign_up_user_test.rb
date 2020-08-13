@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class Mutations::SignUpUserTest < ActiveSupport::TestCase
-  test 'create a user' do
+  test 'sign up user' do
     result = perform(
       user_params: {
         email: 'foo@bar.com',

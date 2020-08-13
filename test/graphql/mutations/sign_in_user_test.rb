@@ -1,9 +1,7 @@
 require 'test_helper'
 
 class Mutations::SignInUserTest < ActiveSupport::TestCase
-  test 'success' do
-    user = users(:maradona)
-
+  test 'sign in user' do
     result = perform(
       user_params: {
         email: 'maradona@maradona.com',
@@ -12,6 +10,31 @@ class Mutations::SignInUserTest < ActiveSupport::TestCase
     )
 
     assert result[:token].present?
+    assert result[:errors].none?
+  end
+
+  test 'sign in user, invalid credentials' do
+    result = perform(
+      user_params: {
+        email: 'maradona@maradona.com',
+        password: 'wrong'
+      }
+    )
+
+    assert result[:errors].any?
+    assert_equal ['Invalid username and/or password'], result[:errors]
+  end
+
+  test 'sign in user, invalid email' do
+    result = perform(
+      user_params: {
+        email: 'does-not-exist@domain.tld',
+        password: 'whatever'
+      }
+    )
+
+    assert result[:errors].any?
+    assert_equal ['Invalid username and/or password'], result[:errors]
   end
 
   private
