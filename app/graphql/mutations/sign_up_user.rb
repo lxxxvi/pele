@@ -1,5 +1,5 @@
 module Mutations
-  class CreateUser < BaseMutation
+  class SignUpUser < BaseMutation
     argument :user_params, Types::UserParams, required: true
 
     field :email, String, null: true

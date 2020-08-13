@@ -16,10 +16,10 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Stadio Olimpico', data['tournamentMatches'].first['venue']['stadium']
   end
 
-  test '#graphql, mutation createUser' do
+  test '#graphql, mutation signUpUser' do
     query_string = <<~GRAPHQL
-      mutation createUser($input: CreateUserInput!) {
-        createUser(input: $input) {
+      mutation signUpUser($input: SignUpUserInput!) {
+        signUpUser(input: $input) {
           email
           errors {
             attribute
@@ -31,13 +31,36 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
 
     variables = { input: { userParams: { email: "zidane@zidane.com", password: "il-a-frappe"} } }
 
-    assert_difference -> { User.count } do
+    assert_difference -> { User.count }, +1 do
       post graphql_path, params: { query: query_string, variables: variables }
     end
 
     json_response = JSON.parse(response.body)
     data = json_response['data']
 
-    assert_equal 'zidane@zidane.com', data['createUser']['email']
+    assert_equal 'zidane@zidane.com', data['signUpUser']['email']
+  end
+
+  test '#graphql, mutation signInUser' do
+    query_string = <<~GRAPHQL
+      mutation signInUser($input: SignInUserInput!) {
+        signInUser(input: $input) {
+          user {
+            email
+          }
+          token
+        }
+      }
+    GRAPHQL
+
+    variables = { input: { userParams: { email: 'maradona@maradona.com', password: 'abc' } } }
+
+    post graphql_path, params: { query: query_string, variables: variables }
+
+    json_response = JSON.parse(response.body)
+    data = json_response['data']
+
+    assert_equal 'maradona@maradona.com', data['signInUser']['user']['email']
+    assert data['signInUser']['user'].present?
   end
 end
