@@ -52,6 +52,7 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
             email
           }
           token
+          errors
         }
       }
     GRAPHQL
@@ -65,5 +66,6 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal 'maradona@maradona.com', data['signInUser']['user']['email']
     assert data['signInUser']['user'].present?
+    assert data['signInUser']['errors'].none?
   end
 end
