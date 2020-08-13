@@ -2,8 +2,8 @@ module Mutations
   class SignInUser < BaseMutation
     argument :user_params, Types::UserParams, required: false
 
-    field :token, String, null: true
     field :user, Types::User, null: true
+    field :token, String, null: true
 
     def resolve(user_params: nil)
       return unless user_params.present?

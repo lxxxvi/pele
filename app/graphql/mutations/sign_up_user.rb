@@ -9,10 +9,7 @@ module Mutations
       user = User.new(user_params.to_h)
       user.save
 
-      {
-        user: user,
-        errors: build_errors(user)
-      }
+      { user: user, errors: build_errors(user) }
     end
 
     private
