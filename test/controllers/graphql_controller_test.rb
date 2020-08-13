@@ -21,11 +21,15 @@ class GraphqlControllerTest < ActionDispatch::IntegrationTest
       mutation createUser($input: CreateUserInput!) {
         createUser(input: $input) {
           email
+          errors {
+            attribute
+            message
+          }
         }
       }
     GRAPHQL
 
-    variables = { input: { userCredentials: { email: "zidane@zidane.com", password: "il-a-frappe"} } }
+    variables = { input: { userParams: { email: "zidane@zidane.com", password: "il-a-frappe"} } }
 
     assert_difference -> { User.count } do
       post graphql_path, params: { query: query_string, variables: variables }

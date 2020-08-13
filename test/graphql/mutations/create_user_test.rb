@@ -2,15 +2,15 @@ require 'test_helper'
 
 class Mutations::CreateUserTest < ActiveSupport::TestCase
   test 'create a user' do
-    user = perform(
-      user_credentials: {
+    result = perform(
+      user_params: {
         email: 'foo@bar.com',
         password: 'abc'
       }
     )
 
-    assert user.persisted?
-    assert_equal 'foo@bar.com', user.email
+    assert_equal 0, result[:errors].size
+    assert_equal 'foo@bar.com', result[:email]
   end
 
   private

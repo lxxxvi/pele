@@ -1,5 +1,5 @@
 module Types
-  class UserCredentialsInput < BaseInputObject
+  class UserParams < BaseInputObject
     argument :email, String, required: true
     argument :password, String, required: true
   end

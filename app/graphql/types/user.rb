@@ -1,5 +1,5 @@
 module Types
-  class UserType < BaseObject
+  class User < BaseObject
     field :email, String, null: false
     field :password, String, null: false
   end

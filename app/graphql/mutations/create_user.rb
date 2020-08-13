@@ -1,14 +1,29 @@
 module Mutations
   class CreateUser < BaseMutation
-    argument :user_credentials, Types::UserCredentialsInput, required: false
+    argument :user_params, Types::UserParams, required: true
 
-    type Types::UserType
+    field :email, String, null: true
+    field :errors, [Types::UserError], null: false
 
-    def resolve(user_credentials: nil)
-      User.create(
-        email: user_credentials[:email],
-        password: user_credentials[:password]
-      )
+    def resolve(user_params: nil)
+      user = User.new(user_params.to_h)
+      user.save
+
+      {
+        email: user.email,
+        errors: build_errors(user)
+      }
+    end
+
+    private
+
+    def build_errors(object)
+      object.errors.map do |attribute, message|
+        {
+          attribute: attribute.to_s.camelize(:lower),
+          message: message
+        }
+      end
     end
   end
 end
