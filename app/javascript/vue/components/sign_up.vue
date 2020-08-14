@@ -3,54 +3,106 @@
     <label for="email">Email</label>
     <input type="text"
            name="email"
-           @keyup="checkAndEnableButton"
-           v-model="email" />
+           v-model="email"
+           @keyup.enter="signUpUser"/>
+    <input-errors :errors="errors" column="email"></input-errors>
 
     <label for="password">Password</label>
     <input type="password"
            name="password"
-           @keyup="checkAndEnableButton"
-           v-model="password" />
+           v-model="password"
+           @keyup.enter="signUpUser"/>
+    <input-errors :errors="errors" column="password"></input-errors>
 
-    <button :disabled="buttonDisabled"
-            @click="signUp" class="my-4 w-32 bg-gray-300">Sign up</button>
+    <button @click="signUpUser" class="my-4 w-32 bg-gray-300">Sign up</button>
   </div>
 </template>
 
 
 <script>
-function getDefaultData() {
-  return {
-    email: "",
-    password: "",
-    buttonDisabled: "disabled"
-  }
-}
+
+import InputErrors from './input_errors.vue'
 
 export default {
-  data: getDefaultData,
+  data: function() {
+    return {
+      email: "",
+      password: "",
+      errors: {},
+    }
+  },
+
+  components: { InputErrors },
+
   methods: {
-    checkAndEnableButton: function() {
-      this.enableButton(this.emailAndPasswordsGiven())
+    signUpUser: function() {
+      fetch('/graphql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-CSRF-Token': document.querySelector(`meta[name="csrf-token"]`).content
+        },
+        body: JSON.stringify({ query: this.signUpUserQuery(), variables: this.signUpUserVariables() })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if(data.data.signUpUser.errors.length > 0) {
+            this.handleSignUpUserErrors(data.data.signUpUser.errors);
+          } else {
+            this.handleSuccess(data.data.signUpUser.email);
+          }
+        });
+
     },
-    enableButton: function(boolean) {
-      if (boolean) {
-        this.buttonDisabled = null
-      } else {
-        this.buttonDisabled = 'disabled'
+
+    signUpUserQuery: function() {
+      return `
+        mutation signUpUser($input: SignUpUserInput!) {
+          signUpUser(input: $input) {
+            user {
+              email
+            }
+            errors {
+              attribute
+              message
+            }
+          }
+        }`
+    },
+
+    signUpUserVariables: function() {
+      return {
+        input: {
+          userParams: {
+            email: this.email,
+            password: this.password
+          }
+        }
       }
     },
-    emailAndPasswordsGiven: function() {
-      return this.email.length > 0 && this.password.length > 0;
+
+    handleSignUpUserErrors(errors) {
+      const errorsByAttribute = errors.reduce((acc, curr) => {
+        acc[curr.attribute] = curr.message;
+        return acc;
+      }, {});
+
+      this.errors = errorsByAttribute;
     },
-    signUp: function() {
-      console.log('todo', this.$data);
+
+    handleSuccess(email) {
+      console.log('emmiting')
+      this.$emit('signInEvent', email);
     }
   }
 }
 </script>
 
 <style scoped>
+label {
+  @apply block text-gray-700 text-sm tracking-wide mt-2;
+}
 input {
   @apply border block;
 }
