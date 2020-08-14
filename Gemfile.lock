@@ -60,7 +60,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.15)
     bindex (0.8.1)
-    bootsnap (1.4.7)
+    bootsnap (1.4.8)
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
@@ -80,7 +80,7 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphql (1.11.2)
+    graphql (1.11.3)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -202,22 +202,22 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt (~> 3.1.7)
+  bcrypt
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   graphql (~> 1.11)
   haml-rails
-  listen (~> 3.2)
+  listen
   pg (>= 0.18, < 2.0)
-  puma (~> 4.1)
+  puma
   rack-cors
-  rails (~> 6.0.3, >= 6.0.3.1)
+  rails
   selenium-webdriver
   tzinfo-data
   web-console (>= 3.3.0)
   webdrivers
-  webpacker (~> 4.0)
+  webpacker
 
 RUBY VERSION
    ruby 2.7.1p83
